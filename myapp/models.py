@@ -9,6 +9,11 @@ class Brand(models.Model):
     country = models.CharField(max_length=50)
 
 
+    def __str__(self):
+
+        return self.name
+    
+
 
 class Car(models.Model):
 
@@ -18,3 +23,8 @@ class Car(models.Model):
     fuel = models.CharField(max_length=50)
     transmission = models.CharField(max_length=50)
     price = models.PositiveBigIntegerField()
+
+
+    def __str__(self):
+
+        return self.name
